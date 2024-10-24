@@ -9,10 +9,10 @@ pipeline {
                     sh 'sudo docker start -a happy_buck'
                     
                     // Run the test script
-                    sh /home/profesor1/mvn_test_log.sh
+                    sh 'sudo bash /home/profesor1/mvn_test_log.sh'
                     
                     // Output the last line of the logs
-                    sh 'cat /home/profesor1/.mvn.logs | tail -1'
+                    sh 'sudo cat /home/profesor1/.mvn.logs | tail -1'
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     // Run the production deployment script
-                    sudo sh /home/profesor1/prod.sh
+                    sh 'sudo bash /home/profesor1/prod.sh'
                 }
             }
         }
