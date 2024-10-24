@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Div with Prettier CSS</title>
+    <style>
+        /* Ensure body takes the full height of the screen and apply flexbox */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;  /* Horizontal centering */
+            align-items: center;      /* Vertical centering */
+            background: linear-gradient(135deg, #a8e063 0%, #56ab2f 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Style for the centered div */
+        .centered-div {
+            width: 400px;
+            height: 250px;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1; /* Make sure the content stays on top */
+        }
+
+        /* Adding a subtle gradient border */
+        .centered-div::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 12px;
+            padding: 1px;
+            background: #ffffffff;
+            z-index: -1; /* Push the pseudo-element behind the content */
+        }
+
+        /* Inner content */
+        .centered-div h1 {
+            font-size: 28px;
+            margin: 0;
+            color: #333;
+        }
+
+        .centered-div p {
+            font-size: 24px;
+            color: #56ab2f;
+            margin-top: 10px;
+        }
+
+        /* Button styling */
+        .centered-div .btn {
+            background-color: #56ab2f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .centered-div .btn:hover {
+            background-color: #a8e063;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="centered-div">
+        <div>
+            <h1>Welcome</h1>
+            <p>{xxxxx}</p>
+            <button class="btn">Get Started</button>
+        </div>
+    </div>
+
+</body>
+</html>
