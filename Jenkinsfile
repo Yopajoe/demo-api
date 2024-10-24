@@ -1,6 +1,16 @@
 pipeline {
     agent any
 
+     stages {
+        stage('Checkout') {
+            steps {
+                // Use the custom workspace for this stage
+                dir('/home/profesor1/demo-api') {
+                    checkout scm
+                }
+            }
+        }
+
     stages {
         stage('Testing') {
             steps {
