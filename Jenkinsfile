@@ -1,21 +1,12 @@
 pipeline {
     agent any
     stages{
-
-        stage('Checkout') {
-            steps {
-                // Use the custom workspace for this stage
-                dir('/home/profesor1/demo-api') {
-                    checkout scm
-                }
-            }
-        }
         
         stage('Testing') {
             steps {
                 script {
                     // Start the container to run the tests
-                    sh 'sudo docker start -a happy_buck'
+                    sh 'sudo docker start -a demo-api_test'
                     
                     // Run the test script
                     sh 'sudo bash /home/profesor1/mvn_test_log.sh'
