@@ -14,7 +14,7 @@
 		<profile>
 			<id>prod</id>
 			<build>
-				<directory>C:\Users\vucur\Desktop\prod</directory>
+				<directory>/prod</directory>
 			</build>
 		</profile>
 	</profiles>
