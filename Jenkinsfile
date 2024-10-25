@@ -21,7 +21,8 @@ pipeline {
             steps {
                 script {
                     // Start the build container
-                    sh 'sudo docker start demo-api_build'
+                    sh 'sudo docker start -a demo-api_build'
+                    sleep 5
                 }
             }
         }
