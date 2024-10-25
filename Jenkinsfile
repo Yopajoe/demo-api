@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-     stages {
+    stages {
         stage('Checkout') {
             steps {
                 // Use the custom workspace for this stage
@@ -9,9 +9,6 @@ pipeline {
                     checkout scm
                 }
             }
-        }
-
-    stages {
         stage('Testing') {
             steps {
                 script {
