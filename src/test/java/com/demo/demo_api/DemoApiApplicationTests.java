@@ -16,6 +16,6 @@ class DemoApiApplicationTests {
 	void contextLoads() {
 
 		System.out.println(env.getProperty("demo")+":Demo test is completed!");
-		//Assertions.fail("Test failed!");
+		Assertions.fail("Test failed!");
 	}
 }
