@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     // Run the production deployment script
-                    sh 'sudo bash /home/profesor1/prod.sh'
+                    sh 'sudo bash /home/profesor1/prod.sh demo-api v1.0'
                 }
             }
         }
